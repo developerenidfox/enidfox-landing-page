@@ -33,7 +33,7 @@ body {
 }
 
 /* ============================================================ */
-/* Custom Brand Entrance Animations                             */
+/* Sequential Entrance Animations (Logo -> Text -> Coming Soon) */
 /* ============================================================ */
 
 @keyframes logoZoomIn {
@@ -50,7 +50,7 @@ body {
 @keyframes textFadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(28px);
+    transform: translateY(24px);
   }
   100% {
     opacity: 1;
@@ -61,7 +61,7 @@ body {
 @keyframes comingSoonFadeInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-36px);
+    transform: translateX(-32px);
   }
   100% {
     opacity: 1;
@@ -69,18 +69,21 @@ body {
   }
 }
 
+/* Step 1: Logo zooms in first (0.1s to ~0.9s) */
 .animate-logo-zoom {
-  animation: logoZoomIn 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+  animation: logoZoomIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
   will-change: transform, opacity;
 }
 
+/* Step 2: Practitioner credentials & divider fade in up (0.95s to ~1.75s) */
 .animate-text-fade-up {
-  animation: textFadeInUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+  animation: textFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.95s both;
   will-change: transform, opacity;
 }
 
+/* Step 3: "Coming Soon" calligraphy fades in left-to-right (1.85s to ~2.75s) */
 .animate-coming-soon-fade-left {
-  animation: comingSoonFadeInLeft 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both;
+  animation: comingSoonFadeInLeft 0.9s cubic-bezier(0.16, 1, 0.3, 1) 1.85s both;
   will-change: transform, opacity;
 }
 
