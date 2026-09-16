@@ -7,7 +7,7 @@ export default function Home() {
       {/* 1. MOBILE VIEW (< md screens: phones up to 767px)            */}
       {/* ============================================================ */}
       <div className="relative h-[100dvh] w-full md:hidden overflow-hidden">
-        {/* Mobile Background Plate (4x plate with Enid & foliage) */}
+        {/* Mobile Background Plate */}
         <Image
           src="/images/mobile-bg.png"
           alt="Enid Fox"
@@ -19,8 +19,8 @@ export default function Home() {
 
         {/* Content Stack: Centered horizontally at the top */}
         <div className="relative z-10 w-full flex flex-col items-center justify-start pt-8 sm:pt-10 px-6 text-center">
-          {/* Logo */}
-          <div className="relative w-44 sm:w-48 max-w-[75vw]">
+          {/* Logo: Zoom In 0-100 */}
+          <div className="animate-logo-zoom relative w-44 sm:w-48 max-w-[75vw]">
             <Image
               src="/images/logo.png"
               alt="Enid Fox"
@@ -32,19 +32,21 @@ export default function Home() {
             />
           </div>
 
-          {/* Practitioner Titles in Montserrat */}
-          <div className="mt-4 space-y-0.5 font-montserrat text-[11px] sm:text-xs font-normal tracking-[0.05em] text-charcoal leading-relaxed text-center">
-            <p>International BodyTalk Practitioner</p>
-            <p>Nature&apos;s Language Practitioner</p>
-            <p>Reiki Master</p>
-            <p>Cranio Sacral Therapist</p>
+          {/* Text Block (Titles + Divider): Fade In Up */}
+          <div className="animate-text-fade-up w-full flex flex-col items-center">
+            <div className="mt-4 space-y-0.5 font-montserrat text-[11px] sm:text-xs font-normal tracking-[0.05em] text-charcoal leading-relaxed text-center">
+              <p>International BodyTalk Practitioner</p>
+              <p>Nature&apos;s Language Practitioner</p>
+              <p>Reiki Master</p>
+              <p>Cranio Sacral Therapist</p>
+            </div>
+
+            {/* Short Thick Divider in Sage */}
+            <div className="w-12 h-[2.5px] bg-sage rounded-full my-3" />
           </div>
 
-          {/* Short Thick Divider in Sage */}
-          <div className="w-12 h-[2.5px] bg-sage rounded-full my-3" />
-
-          {/* "Coming Soon" in Eyesome-Script */}
-          <h2 className="font-eyesome text-4xl sm:text-5xl text-olive font-normal text-center leading-tight">
+          {/* "Coming Soon": Fade In Left to Right */}
+          <h2 className="animate-coming-soon-fade-left font-eyesome text-4xl sm:text-5xl text-olive font-normal text-center leading-tight">
             Coming Soon
           </h2>
         </div>
@@ -54,7 +56,7 @@ export default function Home() {
       {/* 2. TABLET PORTRAIT VIEW (md to lg screens: 768px to 1023px)   */}
       {/* ============================================================ */}
       <div className="hidden md:block lg:hidden relative h-[100dvh] w-full overflow-hidden">
-        {/* Tablet Background Plate (4x plate tailored for tablets) */}
+        {/* Tablet Background Plate */}
         <Image
           src="/images/tablet-bg.png"
           alt="Enid Fox"
@@ -66,8 +68,8 @@ export default function Home() {
 
         {/* Content Stack: Centered horizontally at the top */}
         <div className="relative z-10 w-full flex flex-col items-center justify-start pt-12 md:pt-16 px-8 text-center">
-          {/* Logo */}
-          <div className="relative w-56 md:w-64 max-w-[70vw]">
+          {/* Logo: Zoom In 0-100 */}
+          <div className="animate-logo-zoom relative w-56 md:w-64 max-w-[70vw]">
             <Image
               src="/images/logo.png"
               alt="Enid Fox"
@@ -79,19 +81,21 @@ export default function Home() {
             />
           </div>
 
-          {/* Practitioner Titles in Montserrat */}
-          <div className="mt-5 space-y-1 font-montserrat text-xs md:text-sm font-normal tracking-[0.06em] text-charcoal leading-relaxed text-center">
-            <p>International BodyTalk Practitioner</p>
-            <p>Nature&apos;s Language Practitioner</p>
-            <p>Reiki Master</p>
-            <p>Cranio Sacral Therapist</p>
+          {/* Text Block (Titles + Divider): Fade In Up */}
+          <div className="animate-text-fade-up w-full flex flex-col items-center">
+            <div className="mt-5 space-y-1 font-montserrat text-xs md:text-sm font-normal tracking-[0.06em] text-charcoal leading-relaxed text-center">
+              <p>International BodyTalk Practitioner</p>
+              <p>Nature&apos;s Language Practitioner</p>
+              <p>Reiki Master</p>
+              <p>Cranio Sacral Therapist</p>
+            </div>
+
+            {/* Short Thick Divider in Sage */}
+            <div className="w-14 h-[2.5px] bg-sage rounded-full my-4" />
           </div>
 
-          {/* Short Thick Divider in Sage */}
-          <div className="w-14 h-[2.5px] bg-sage rounded-full my-4" />
-
-          {/* "Coming Soon" in Eyesome-Script */}
-          <h2 className="font-eyesome text-5xl md:text-6xl text-olive font-normal text-center leading-tight">
+          {/* "Coming Soon": Fade In Left to Right */}
+          <h2 className="animate-coming-soon-fade-left font-eyesome text-5xl md:text-6xl text-olive font-normal text-center leading-tight">
             Coming Soon
           </h2>
         </div>
@@ -133,8 +137,8 @@ export default function Home() {
 
           {/* Right Column: Content Column (Vertically Centered & Shifted Left) */}
           <div className="h-full flex flex-col items-center justify-center px-6 text-center lg:-translate-x-14">
-            {/* Logo at top of stack */}
-            <div className="relative w-56 sm:w-64 md:w-72 lg:w-80 max-w-[85vw] pointer-events-auto">
+            {/* Logo: Zoom In 0-100 */}
+            <div className="animate-logo-zoom relative w-56 sm:w-64 md:w-72 lg:w-80 max-w-[85vw] pointer-events-auto">
               <Image
                 src="/images/logo.png"
                 alt="Enid Fox"
@@ -146,19 +150,21 @@ export default function Home() {
               />
             </div>
 
-            {/* Practitioner Titles in Montserrat Font (Centered) */}
-            <div className="mt-5 sm:mt-7 space-y-1 sm:space-y-1.5 font-montserrat text-xs sm:text-sm md:text-[15px] font-normal tracking-[0.06em] text-charcoal leading-relaxed text-center pointer-events-auto">
-              <p>International BodyTalk Practitioner</p>
-              <p>Nature&apos;s Language Practitioner</p>
-              <p>Reiki Master</p>
-              <p>Cranio Sacral Therapist</p>
+            {/* Text Block (Titles + Divider): Fade In Up */}
+            <div className="animate-text-fade-up w-full flex flex-col items-center">
+              <div className="mt-5 sm:mt-7 space-y-1 sm:space-y-1.5 font-montserrat text-xs sm:text-sm md:text-[15px] font-normal tracking-[0.06em] text-charcoal leading-relaxed text-center pointer-events-auto">
+                <p>International BodyTalk Practitioner</p>
+                <p>Nature&apos;s Language Practitioner</p>
+                <p>Reiki Master</p>
+                <p>Cranio Sacral Therapist</p>
+              </div>
+
+              {/* Short Thick Divider in Sage Color */}
+              <div className="w-16 sm:w-20 h-[3px] bg-sage rounded-full my-4 sm:my-5 pointer-events-auto" />
             </div>
 
-            {/* Short Thick Divider in Sage Color */}
-            <div className="w-16 sm:w-20 h-[3px] bg-sage rounded-full my-4 sm:my-5 pointer-events-auto" />
-
-            {/* "Coming Soon" in Eyesome-Script Font */}
-            <h2 className="font-eyesome text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-olive font-normal text-center pointer-events-auto leading-tight">
+            {/* "Coming Soon": Fade In Left to Right */}
+            <h2 className="animate-coming-soon-fade-left font-eyesome text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-olive font-normal text-center pointer-events-auto leading-tight">
               Coming Soon
             </h2>
           </div>
