@@ -15,8 +15,8 @@ export default function Home() {
         />
       </div>
 
-      {/* 2. Enid Portrait (100dvh, anchored to bottom, behind bottom-left leaf) */}
-      <div className="pointer-events-none absolute bottom-0 left-0 h-[100dvh] w-auto max-w-[65vw] sm:max-w-[55vw] lg:max-w-[50vw] z-10 flex items-end">
+      {/* 2. Enid Portrait (100dvh, shifted 75px right, anchored to bottom, behind bottom-left leaf) */}
+      <div className="pointer-events-none absolute bottom-0 left-[75px] h-[100dvh] w-auto z-10 flex items-end">
         <Image
           src="/images/enid.png"
           alt="Enid Fox"
