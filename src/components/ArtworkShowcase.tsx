@@ -18,18 +18,18 @@ export function ArtworkShowcase({
 
   return (
     <div className="relative w-full max-w-xl mx-auto group">
-      {/* Ambient background glow */}
-      <div className="absolute -inset-1.5 bg-gradient-to-tr from-amber-500/20 via-orange-500/10 to-rose-500/20 rounded-3xl blur-2xl opacity-75 group-hover:opacity-100 transition duration-1000 -z-10" />
+      {/* Subtle organic ambient glow */}
+      <div className="absolute -inset-2 bg-gradient-to-tr from-olive/15 via-sage/20 to-stone/10 rounded-3xl blur-2xl opacity-70 group-hover:opacity-100 transition duration-700 -z-10" />
 
-      {/* Main Container Card */}
-      <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-neutral-900/90 to-neutral-950/95 shadow-2xl backdrop-blur-xl transition-all duration-500 hover:border-amber-500/30">
+      {/* Main Showcase Card */}
+      <div className="relative overflow-hidden rounded-3xl border border-stone/40 bg-cream-card shadow-xl transition-all duration-300 hover:border-olive/40 hover:shadow-2xl">
         <div className="aspect-[4/5] sm:aspect-square w-full relative flex items-center justify-center p-4 sm:p-8">
           {!imageError ? (
             <>
               {/* Image loading indicator */}
               {!imageLoaded && (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="h-10 w-10 animate-spin rounded-full border-2 border-amber-400 border-t-transparent" />
+                  <div className="h-10 w-10 animate-spin rounded-full border-2 border-olive border-t-transparent" />
                 </div>
               )}
               <Image
@@ -37,23 +37,23 @@ export function ArtworkShowcase({
                 alt={alt}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-                className={`object-contain p-4 transition-all duration-700 ${
-                  imageLoaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
-                } group-hover:scale-[1.02]`}
+                className={`object-contain p-4 transition-opacity duration-500 ${
+                  imageLoaded ? "opacity-100" : "opacity-0"
+                }`}
                 onLoad={() => setImageLoaded(true)}
                 onError={() => setImageError(true)}
                 priority
               />
             </>
           ) : (
-            /* Placeholder state when artwork hasn't been dropped into public/artwork yet */
+            /* Fallback state when artwork is pending */
             <div className="flex flex-col items-center justify-center text-center p-8 z-10 select-none">
-              {/* Abstract Fox / Art Motif Icon */}
+              {/* Minimalist Fox Silhouette Motif in Olive & Sage */}
               <div className="relative mb-6">
-                <div className="absolute -inset-2 bg-amber-500/20 rounded-full blur-xl animate-pulse" />
-                <div className="relative h-28 w-28 rounded-2xl bg-gradient-to-br from-amber-500/20 via-orange-600/20 to-neutral-900 border border-amber-500/30 flex items-center justify-center text-amber-400 shadow-inner">
+                <div className="absolute -inset-2 bg-sage/30 rounded-2xl blur-lg" />
+                <div className="relative h-28 w-28 rounded-2xl bg-gradient-to-br from-cream via-sage-soft to-cream border border-olive/20 flex items-center justify-center shadow-sm">
                   <svg
-                    className="w-16 h-16 text-amber-400/90"
+                    className="w-16 h-16 text-olive"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -69,24 +69,24 @@ export function ArtworkShowcase({
                 </div>
               </div>
 
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-xs font-medium text-amber-300 mb-3 tracking-wide">
-                <Sparkles className="w-3.5 h-3.5" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sage-soft border border-sage/40 text-xs font-semibold text-olive mb-3">
+                <Sparkles className="w-3.5 h-3.5 text-olive" />
                 Artwork Showcase Ready
               </div>
 
-              <h3 className="text-xl font-medium text-neutral-200 tracking-tight mb-2">
+              <h3 className="text-xl font-bold text-charcoal tracking-tight mb-2">
                 Artwork Pending Drop-In
               </h3>
-              <p className="text-sm text-neutral-400 max-w-xs leading-relaxed">
+              <p className="text-sm text-charcoal-muted max-w-xs leading-relaxed">
                 Add your artwork file to{" "}
-                <code className="text-amber-300 font-mono text-xs bg-neutral-800/80 px-1.5 py-0.5 rounded border border-neutral-700">
+                <code className="text-olive font-mono text-xs bg-cream px-1.5 py-0.5 rounded border border-stone/50 font-medium">
                   public/artwork/artwork.png
                 </code>{" "}
                 to display it here.
               </p>
 
-              <div className="mt-6 flex items-center gap-2 text-xs text-neutral-500">
-                <ImageIcon className="w-4 h-4" />
+              <div className="mt-6 flex items-center gap-2 text-xs text-charcoal-muted">
+                <ImageIcon className="w-4 h-4 text-stone-dark" />
                 <span>Supports PNG, SVG, JPG, or WebP</span>
               </div>
             </div>
@@ -94,12 +94,12 @@ export function ArtworkShowcase({
         </div>
 
         {/* Bottom subtle edge info */}
-        <div className="px-6 py-3 bg-neutral-900/50 border-t border-white/5 flex items-center justify-between text-xs text-neutral-400">
-          <span className="flex items-center gap-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse" />
+        <div className="px-6 py-3 bg-cream border-t border-stone/30 flex items-center justify-between text-xs text-charcoal-muted">
+          <span className="flex items-center gap-1.5 font-medium text-olive">
+            <span className="h-1.5 w-1.5 rounded-full bg-olive animate-pulse" />
             Visual Identity
           </span>
-          <span className="font-mono text-neutral-500">ENID FOX // 2026</span>
+          <span className="font-mono text-stone-dark font-medium">ENID FOX // 2026</span>
         </div>
       </div>
     </div>

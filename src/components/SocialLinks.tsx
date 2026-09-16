@@ -45,7 +45,7 @@ const socialLinks: SocialLinkItem[] = [
 
 export function SocialLinks() {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-2.5">
       {socialLinks.map((item) => {
         const IconComponent = item.icon;
         return (
@@ -55,9 +55,9 @@ export function SocialLinks() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={item.label}
-            className="group relative flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-neutral-900/60 text-neutral-400 hover:text-amber-400 hover:border-amber-500/30 hover:bg-neutral-900 transition-all duration-200"
+            className="flex h-10 w-10 items-center justify-center rounded-xl border border-stone/50 bg-cream-card text-charcoal hover:text-cream hover:bg-olive hover:border-olive shadow-sm transition-all duration-200"
           >
-            <IconComponent className="h-4 w-4 transition-transform group-hover:scale-110" />
+            <IconComponent className="h-4 w-4" />
             <span className="sr-only">{item.label}</span>
           </a>
         );

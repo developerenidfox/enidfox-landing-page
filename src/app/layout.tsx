@@ -13,25 +13,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Enid Fox — Coming Soon",
-  description: "Something extraordinary is in the works. Sign up to get notified when Enid Fox officially launches.",
+  title: "Enid Fox — Official Website Coming Soon",
+  description: "Something extraordinary is taking shape. Be the first to know when Enid Fox officially launches.",
   keywords: ["Enid Fox", "Landing Page", "Official Website", "Coming Soon", "Art", "Design"],
   authors: [{ name: "Enid Fox" }],
   openGraph: {
     title: "Enid Fox — Coming Soon",
-    description: "Something extraordinary is in the works. Sign up to get notified when Enid Fox officially launches.",
+    description: "Something extraordinary is taking shape. Be the first to know when Enid Fox officially launches.",
     type: "website",
     siteName: "Enid Fox",
   },
   twitter: {
     card: "summary_large_image",
     title: "Enid Fox — Coming Soon",
-    description: "Something extraordinary is in the works. Sign up to get notified when Enid Fox officially launches.",
+    description: "Something extraordinary is taking shape. Be the first to know when Enid Fox officially launches.",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0a0a0c",
+  themeColor: "#F4EFE8",
 };
 
 export default function RootLayout({
@@ -42,9 +42,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-neutral-950 text-neutral-100 font-sans">{children}</body>
+      <body className="min-h-full flex flex-col bg-cream text-charcoal font-sans">{children}</body>
     </html>
   );
 }
