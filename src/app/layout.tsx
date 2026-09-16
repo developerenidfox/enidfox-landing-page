@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -11,6 +11,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
 });
 
 const eyesomeScript = localFont({
@@ -40,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${eyesomeScript.variable} h-[100dvh] antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${eyesomeScript.variable} h-[100dvh] antialiased`}
     >
       <body className="h-[100dvh] overflow-hidden bg-cream text-charcoal font-sans m-0 p-0">{children}</body>
     </html>
